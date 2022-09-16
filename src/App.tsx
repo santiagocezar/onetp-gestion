@@ -78,27 +78,6 @@ class API {
 
 const api = new API('http://192.168.40.12:4000')
 
-function LoginForm() {
-    const [username, setUsername] = useState('')
-    const [password, setPassword] = useState('')
-    const navigate = useNavigate()
-
-    async function onSubmit(e: FormEvent) {
-        e.preventDefault()
-        navigate("/new_expo")
-        await api.login(username, password)
-
-        if (e.target instanceof HTMLFormElement)
-            e.target.reset()
-    }
-
-    return <form onSubmit={onSubmit} className="form">
-        <input className="input" type="text" value={username} onChange={e => setUsername(e.target.value)} />
-        <input className="input" type="text" value={password} onChange={e => setPassword(e.target.value)} />
-        <button className="submit" type="submit">Iniciar sesión</button>
-    </form>
-}
-
 interface InputProps {
     label: string;
     type: string;
@@ -123,6 +102,27 @@ interface SubmitButtonProps {
 const SubmitButton = ({text}: SubmitButtonProps) => (
     <button className='bg-blue8 rd-5 px-2 py-3 text-white' type="submit">{text}</button>
 )
+
+function LoginForm() {
+    const [username, setUsername] = useState('')
+    const [password, setPassword] = useState('')
+    const navigate = useNavigate()
+
+    async function onSubmit(e: FormEvent) {
+        e.preventDefault()
+        navigate("/new_expo")
+        await api.login(username, password)
+
+        if (e.target instanceof HTMLFormElement)
+            e.target.reset()
+    }
+
+    return <form onSubmit={onSubmit} className="form">
+        <input className="input" type="text" value={username} onChange={e => setUsername(e.target.value)} />
+        <input className="input" type="text" value={password} onChange={e => setPassword(e.target.value)} />
+        <SubmitButton text="Iniciar sesión" />
+    </form>
+}
 
 function CrearExpoForm() {
     async function onSubmit(e: FormEvent) {
