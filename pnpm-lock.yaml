@@ -1,6 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@iconify-json/ic': ^1.1.9
   '@iconify-json/simple-icons': ^1.1.20
   '@types/node': ^18.7.18
   '@types/react': ^18.0.17
@@ -19,6 +20,7 @@ specifiers:
   vite: ^3.1.0
 
 dependencies:
+  '@iconify-json/ic': 1.1.9
   '@unocss/reset': 0.45.21
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
@@ -327,6 +329,12 @@ packages:
     dev: true
     optional: true
 
+  /@iconify-json/ic/1.1.9:
+    resolution: {integrity: sha512-yRHx4AnNNf5kpWVnNMaeXGYnLmaR2tkGsjSc//FaI7LhljUaDkiawUvmnYbjh6M61O78EeEoNk8HgYJVqb+y8A==}
+    dependencies:
+      '@iconify/types': 2.0.0
+    dev: false
+
   /@iconify-json/simple-icons/1.1.26:
     resolution: {integrity: sha512-UshT7C8Bt349rr/MIs5TTMNAM4Yn1okdCFUxzPudUFQFiX6BuxAH/mFzaY4/Q5i8mV3m2FTdu4hG3bqyslxFlQ==}
     dependencies:
@@ -339,7 +347,6 @@ packages:
 
   /@iconify/types/2.0.0:
     resolution: {integrity: sha512-+wluvCrRhXrhyOmRDJ3q8mux9JkKy5SJ/v8ol2tu4FVjyYvtEzkc/3pK15ET6RKg4b4w4BmTk1+gsCUhf21Ykg==}
-    dev: true
 
   /@iconify/utils/1.0.33:
     resolution: {integrity: sha512-vGeAqo7aGPxOQmGdVoXFUOuyN+0V7Lcrx2EvaiRjxUD1x6Om0Tvq2bdm7E24l2Pz++4S0mWMCVFXe/17EtKImQ==}

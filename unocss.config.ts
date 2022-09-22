@@ -1,10 +1,15 @@
 import { defineConfig } from "@unocss/vite";
 import presetUno from "@unocss/preset-uno";
 import presetWebFonts from "@unocss/preset-web-fonts";
+import presetIcons from "@unocss/preset-icons"
 
 export default defineConfig({
     presets: [
         presetUno({}),
+        //@ts-expect-error
+        presetIcons({
+            scale: 1.5,
+        }),
         presetWebFonts({
             fonts: {
                 title: "Poppins:300,400,700,900",
